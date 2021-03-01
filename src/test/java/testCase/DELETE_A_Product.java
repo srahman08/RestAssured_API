@@ -13,28 +13,28 @@ import io.restassured.response.Response;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;  
 
-	public class POST_Or_Create_A_Product {
+	public class DELETE_A_Product {
 		
 		SoftAssert softAssert = new SoftAssert();
 	
 		@Test
-		public void read_All_Products () {
+		public void delete_A_Product () {
 			
 			HashMap payload = new HashMap();
-			payload.put("name", "Shamim_Harry Potter 7");
-			payload.put("description", "fiction");
-			payload.put("price", "99.99");
-			payload.put("category_name", "Books");
-			payload.put("category_id", "4");
+			payload.put("id", "55");
+//			payload.put("name", "Harry Potter 7");
+//			payload.put("description", "fiction");
+//			payload.put("price", "99");
+//			payload.put("category_name", "Books");
+//			payload.put("category_id", "4");
 			
 			Response response = 
 			given()
 				.baseUri("https://techfios.com/api-prod/api/product")
 				.header("Content-Type","application/json; charset=UTF-8")
 				.body(payload)
-				
 			.when()
-				.post("/create.php")
+				.delete("/delete.php")
 			.then()
 				.extract().response();
 			
@@ -43,8 +43,9 @@ import java.util.concurrent.TimeUnit;
 
 			JsonPath js = new JsonPath(responseBody);
 			String message= js.getString("message"); 
-			Assert.assertEquals(message, "Product was created.");
-
+			softAssert.assertEquals(message, "Product was deleted.", "not matching");
+			
+			softAssert.assertAll();
 			
 		}
 	}

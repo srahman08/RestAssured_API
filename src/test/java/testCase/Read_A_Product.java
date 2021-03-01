@@ -15,16 +15,15 @@ import java.util.concurrent.TimeUnit;
 	public class Read_A_Product {
 		
 		SoftAssert softAssert = new SoftAssert();
-
 		
 		@Test
-		public void read_All_Products () {
+		public void read_A_Products () {
 			
 			Response response = 
 			given()
 				.baseUri("https://techfios.com/api-prod/api/product")
 				.header("Content-Type","application/json; charset=UTF-8")
-				.queryParam("id", "1209")
+				.queryParam("id", "1305")
 			.when()
 				.get("/read_one.php")
 			.then()
@@ -41,9 +40,9 @@ import java.util.concurrent.TimeUnit;
 			String productName= js.getString("name"); 
 			String productDescription= js.getString("description"); 
 			
-			Assert.assertEquals(productId, "1209");
-			Assert.assertEquals(productName, "HP Laptop Elite Pro");
-			Assert.assertEquals(productDescription, "Super fast laptop");
+			Assert.assertEquals(productId, "1305");
+			Assert.assertEquals(productName, "Harry Potter 7");
+			Assert.assertEquals(productDescription, "fiction");
 
 			System.out.println(productId);
 			

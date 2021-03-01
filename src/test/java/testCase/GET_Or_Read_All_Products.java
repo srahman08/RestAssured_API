@@ -2,10 +2,9 @@ package testCase;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
-
 import static io.restassured.RestAssured.*;  
 
 public class GET_Or_Read_All_Products {
@@ -28,10 +27,10 @@ public class GET_Or_Read_All_Products {
 		
 		String responseBody = response.getBody().asString();
 		System.out.println(responseBody);
-		
+		JsonPath js = new JsonPath(responseBody);
+		js.prettyPrint();
 	}
 	
-
 }
 
 //https://techfios.com/api-prod/api/product/create.php

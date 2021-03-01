@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2854" started-at="2021-02-27T19:38:35Z" finished-at="2021-02-27T19:38:38Z">
+  <suite name="Default suite" duration-ms="3651" started-at="2021-03-01T04:14:26Z" finished-at="2021-03-01T04:14:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2854" started-at="2021-02-27T19:38:35Z" finished-at="2021-02-27T19:38:38Z">
-      <class name="testCase.Read_A_Product">
-        <test-method status="PASS" signature="read_All_Products()[pri:0, instance:testCase.Read_A_Product@78aab498]" name="read_All_Products" duration-ms="2818" started-at="2021-02-27T19:38:35Z" finished-at="2021-02-27T19:38:38Z">
+    <test name="Default test" duration-ms="3651" started-at="2021-03-01T04:14:26Z" finished-at="2021-03-01T04:14:29Z">
+      <class name="testCase.Put_Or_Update_A_Product">
+        <test-method status="PASS" signature="Update_A_Product()[pri:0, instance:testCase.Put_Or_Update_A_Product@78aab498]" name="Update_A_Product" duration-ms="3585" started-at="2021-03-01T04:14:26Z" finished-at="2021-03-01T04:14:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- read_All_Products -->
-      </class> <!-- testCase.Read_A_Product -->
+        </test-method> <!-- Update_A_Product -->
+      </class> <!-- testCase.Put_Or_Update_A_Product -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
